@@ -4,7 +4,7 @@ const app = express();
 
 const PORT = 8080;
 
-app.get('', function(){
+app.get('', function(req, res){
     res.send('Página Inicial da Calculadora')
 })
 
