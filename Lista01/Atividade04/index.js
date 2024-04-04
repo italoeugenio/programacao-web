@@ -9,7 +9,7 @@ app.get('', function(){
 })
 
 app.get("/somar/:a/:b", function(req, res) {
-    const result = parseFloat(calculadora.somar(req.params.a, req.params.b));
+    const result = parseFloat(req.params.a) + parseFloat(req.params.b);
     res.send(`= ${result}`);
 });
 
