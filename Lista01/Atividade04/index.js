@@ -4,12 +4,14 @@ const app = express();
 
 const PORT = 8080;
 
-app.get('', function(req, res){
+app.get('/', function(req, res){
     res.send('Página Inicial da Calculadora')
 })
 
 app.get("/somar/:a/:b", function(req, res) {
-    const result = parseFloat(req.params.a) + parseFloat(req.params.b);
+    const a = parseFloat(req.params.a);
+    const b = parseFloat(req.params.b);
+    const result = calculadora.somar(a, b);
     res.send(`= ${result}`);
 });
 
